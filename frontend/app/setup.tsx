@@ -56,10 +56,8 @@ export default function Setup() {
           <View style={styles.noteContent}>
             <Text style={styles.noteTitle}>Important Notes</Text>
             <Text style={styles.noteText}>
-              • Changes may take a few minutes to apply{'
-'}
-              • This feature requires iOS 10 or later{'
-'}
+              • Changes may take a few minutes to apply{'\n'}
+              • This feature requires iOS 10 or later{'\n'}
               • Works only on physical iOS devices, not simulators
             </Text>
           </View>
