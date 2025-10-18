@@ -203,7 +203,7 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
   monospace: {
-    fontFamily: Platform.OS === 'ios' ? 'Courier' : 'monospace',
+    fontFamily: 'monospace',
   },
   errorText: {
     fontSize: 12,
