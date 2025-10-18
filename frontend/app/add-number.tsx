@@ -12,8 +12,8 @@ import {
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
 import { Ionicons } from '@expo/vector-icons';
-import { addBlockedNumber } from '../utils/storage';
-import { formatPhoneNumber, validatePhoneNumber } from '../utils/phoneValidator';
+import { addBlockedNumber } from '../src/storage';
+import { formatPhoneNumber, validatePhoneNumber } from '../src/phoneValidator';
 
 export default function AddNumber() {
   const router = useRouter();
