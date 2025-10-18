@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
   },
   pattern: {
     fontSize: 13,
-    fontFamily: Platform.OS === 'ios' ? 'Courier' : 'monospace',
+    fontFamily: 'monospace',
     color: '#34C759',
     marginTop: 4,
   },
