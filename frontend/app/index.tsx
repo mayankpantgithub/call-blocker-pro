@@ -3,7 +3,7 @@ import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { useState, useCallback } from 'react';
 import { useFocusEffect } from '@react-navigation/native';
-import { getBlockedNumbers, getBlockLists, getRegexPatterns } from '../utils/storage';
+import { getBlockedNumbers, getBlockLists, getRegexPatterns } from '../src/storage';
 
 export default function Index() {
   const router = useRouter();
