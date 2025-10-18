@@ -1,9 +1,34 @@
 import { MMKV } from 'react-native-mmkv';
 
 // Initialize MMKV storage
-const storage = new MMKV({
-  id: 'call-blocker-storage',
-});
+let storage: MMKV;
+
+try {
+  storage = new MMKV({
+    id: 'call-blocker-storage',
+  });
+} catch (error) {
+  console.error('MMKV initialization error:', error);
+  // Fallback to mock storage for development
+  storage = {
+    getString: (key: string) => {
+      if (typeof localStorage !== 'undefined') {
+        return localStorage.getItem(key) || undefined;
+      }
+      return undefined;
+    },
+    set: (key: string, value: string) => {
+      if (typeof localStorage !== 'undefined') {
+        localStorage.setItem(key, value);
+      }
+    },
+    delete: (key: string) => {
+      if (typeof localStorage !== 'undefined') {
+        localStorage.removeItem(key);
+      }
+    },
+  } as any;
+}
 
 // Types
 export interface BlockedNumber {
